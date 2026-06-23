@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mallorca · 1–4 juillet 2026 · Port d'Andratx</title>
+<meta name="description" content="Carnet de voyage Majorque — Samia & Alexis. Vol, hôtel, météo réelle, itinéraire nature, lounges, sac à dos." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="sun" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="brand" href="#top">◍ Mallorca<span>'26</span></a>
+  <div class="nav-links">
+    <a href="#vol">Vol</a>
+    <a href="#meteo">Météo</a>
+    <a href="#jours">Itinéraire</a>
+    <a href="#transport">Transport</a>
+    <a href="#lounges">Lounges</a>
+    <a href="#sac">Sac à dos</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero">
+  <p class="kicker">Carnet de voyage · Samia &amp; Alexis</p>
+  <h1>Port d'Andratx<br /><em>Majorque</em></h1>
+  <p class="dates">mer. 1<sup>er</sup> → sam. 4 juillet 2026 · 3 nuits</p>
+  <div class="hero-chips">
+    <span>☀️ ~30 °C</span>
+    <span>🌊 Mer 27,7 °C</span>
+    <span>🏨 La Pergola · 9,0/10</span>
+    <span>✈️ Ryanair · TLS↔PMI</span>
+  </div>
+  <a class="scroll-cue" href="#vol">commencer ↓</a>
+</header>
+
+<main>
+
+<!-- VOL + HOTEL -->
+<section id="vol" class="band">
+  <h2 class="sec-title"><span>01</span> Vol &amp; hébergement</h2>
+  <div class="grid-2">
+    <div class="card flight">
+      <div class="card-tag">Ryanair · PNR K6JSYN</div>
+      <div class="leg">
+        <div class="endpoint"><b>06:00</b><span>TLS</span><small>Toulouse</small></div>
+        <div class="arrow">✈ <i>FR4215</i><br />mer. 1 juil.</div>
+        <div class="endpoint"><b>07:10</b><span>PMI</span><small>Palma</small></div>
+      </div>
+      <div class="leg">
+        <div class="endpoint"><b>21:05</b><span>PMI</span><small>Palma</small></div>
+        <div class="arrow">✈ <i>FR4214</i><br />sam. 4 juil.</div>
+        <div class="endpoint"><b>22:25</b><span>TLS</span><small>Toulouse</small></div>
+      </div>
+      <p class="pax">👤 Samia Adaoude &nbsp;·&nbsp; 👤 Alexis Pontikis</p>
+    </div>
+
+    <div class="card hotel">
+      <div class="card-tag green">Confirmée · annulation gratuite</div>
+      <h3>Hotel La Pergola Mallorca</h3>
+      <p class="addr">Av. S'Almudaina 16 · Port d'Andratx</p>
+      <ul class="facts">
+        <li><b>9,0</b> Fabuleux (1 007 avis)</li>
+        <li>2 piscines + spa · navette aéroport</li>
+        <li>Check-in 14:00 · check-out 12:00</li>
+        <li>700 m du port · 700 m Cala Fonoll</li>
+      </ul>
+      <div class="price">€ 497,04 <span>taxes incluses</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- METEO -->
+<section id="meteo" class="band alt">
+  <h2 class="sec-title"><span>02</span> Météo &amp; mer <small id="wx-source">données réelles</small></h2>
+  <p class="lead">Prévision Open-Meteo récupérée en direct (repli sur le relevé du 23 juin si l'API est hors-ligne). Mer chaude, ciel surtout dégagé, petit risque d'averse les deux premiers jours. <b>UV 8 = crème indispensable.</b></p>
+  <div id="wx-grid" class="wx-grid"><!-- injected by JS --></div>
+  <p class="sun-note">🌅 Lever 06:26 · 🌇 Coucher 21:21 — 15 h de jour, soirées longues.</p>
+</section>
+
+<!-- ITINERAIRE -->
+<section id="jours" class="band">
+  <h2 class="sec-title"><span>03</span> Itinéraire jour par jour</h2>
+  <div class="day-tabs" id="day-tabs">
+    <button class="active" data-day="0">Mer 1</button>
+    <button data-day="1">Jeu 2</button>
+    <button data-day="2">Ven 3</button>
+    <button data-day="3">Sam 4</button>
+  </div>
+  <div id="day-panels"><!-- injected by JS --></div>
+</section>
+
+<!-- TRANSPORT -->
+<section id="transport" class="band alt">
+  <h2 class="sec-title"><span>04</span> Transport</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-tag">Jour 1 · le moins cher = bus</div>
+      <h3>🚌 Aéroport → Port d'Andratx</h3>
+      <p class="lead small">Ni l'A11 ni la 101 ne fait l'aéroport ↔ Port d'Andratx d'une traite. Une correspondance à Camp de Mar, sans détour par Palma.</p>
+      <ol class="steps">
+        <li><b>A11</b> Aéroport (PMI) → Santa Ponça → Peguera → <b>Camp de Mar</b> <i>(terminus)</i></li>
+        <li><b>101</b> Camp de Mar → Andratx → <b>Port d'Andratx</b></li>
+      </ol>
+      <p class="tip">⚠️ Arrivée 07:10 : vérifier le 1<sup>er</sup> A11 du matin sur l'app <b>TIB</b> (parfois ~08:00). Repli : taxi Camp de Mar → hôtel (~6 km). Billets dans l'app TIB / sans contact à bord.</p>
+    </div>
+    <div class="card">
+      <div class="card-tag amber">Jours 2–4 · liberté</div>
+      <h3>🚗 Voiture : à réserver à l'avance</h3>
+      <p class="lead small">Juillet = haute saison. Le comptoir sur place est plus cher et souvent à sec. Réserve <b>en ligne maintenant</b> (annulation gratuite chez la plupart).</p>
+      <ul class="facts">
+        <li>~27–35 €/jour en réservant tôt vs guichet salé</li>
+        <li>Prise au PMI le jour 1 possible, ou en ville jour 2 pour économiser 1 journée</li>
+        <li><b>Lounge = sur place uniquement</b> → prévoir un conducteur sobre</li>
+      </ul>
+      <p class="tip">Compare DoYouSpain / Centauro / Record. Petite catégorie = parkings de criques étroits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOUNGES + CRIQUES -->
+<section id="lounges" class="band">
+  <h2 class="sec-title"><span>05</span> Lounges &amp; criques autour</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>🛋️ Lounges privés (membres)</h3>
+      <p class="lead small">Accès réservé aux membres. <b>Adhésion en ligne (~24h) + pièce d'identité</b> : à valider <u>avant</u> le départ. Réserver une table par WhatsApp le week-end.</p>
+      <ul class="facts">
+        <li><b>Lounge du port</b> — Carrer de sa Fábrica, ~10 min à pied de l'hôtel ✦ ton repère</li>
+        <li><b>Lounges Palma centre</b> — ~6 adresses, ~35 min voiture</li>
+        <li><b>Lounge Calvià</b> — côte, ~15 min</li>
+        <li><b>Lounges S'Arenal</b> — côté est (plan B)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏖️ Criques à pied / proches</h3>
+      <ul class="facts">
+        <li><b>Cala Fonoll</b> — 700 m, petite &amp; calme</li>
+        <li><b>Cala d'Egos</b> — 2,4 km, rochers &amp; pins</li>
+        <li><b>Camp de Mar</b> — sable, îlot resto, navette</li>
+        <li><b>Sant Elm + Sa Dragonera</b> — bateau, parc national</li>
+        <li><b>Cala Fornells</b> — pins, ombre naturelle</li>
+      </ul>
+      <p class="tip">Mer à 27,7 °C, houle ~0,6 m = snorkel/baignade idéal. Masque + tuba dans le sac.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SAC A DOS -->
+<section id="sac" class="band alt">
+  <h2 class="sec-title"><span>06</span> Sac à dos · voyage léger</h2>
+  <p class="lead">Petit sac cabine, chaleur 30 °C / UV 8 / mer chaude / soirées douces / rando côtière. Coche au fur et à mesure — c'est sauvegardé sur ton appareil.</p>
+  <div id="pack" class="pack-grid"><!-- injected by JS --></div>
+  <button id="reset-pack" class="reset">Tout décocher</button>
+</section>
+
+</main>
+
+<footer>
+  <p>Fait avec ☀️ pour Samia &amp; Alexis · Météo &amp; mer : Open-Meteo · Bus : TIB.org</p>
+  <p class="mini">Carnet généré le 23 juin 2026 — données vol/hôtel réelles, prévisions susceptibles d'évoluer.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
